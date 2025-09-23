@@ -20,7 +20,6 @@ export default function StarBackground() {
     };
     window.addEventListener('resize', handleResize);
 
-    // Cleanup listener when component unmounts
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -36,7 +35,7 @@ export default function StarBackground() {
       newStars.push({
         id: i, // unique key
         size:
-          Math.random() < 0.05 ? Math.random() * 6 + 4 : Math.random() * 3 + 1, // %5 chance planet otherwise star
+          Math.random() < 0.03 ? Math.random() * 9 + 3 : Math.random() * 3 + 1, // %3
         x: Math.random() * 100, // left position (%)
         y: Math.random() * 100, // top position (%)
         opacity: Math.random() * 0.5 + 0.5, // visible 50-100%
