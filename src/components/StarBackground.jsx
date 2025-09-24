@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { randomMinMax } from '../lib/utils';
 
-// Stars: id, size, x, y, opacity, animationDuration
+// Stars: id, size, x, y, opacity, animationDelay, animationDuration
 // Meteors: id, size, x, y, animationDelay, animationDuration
 
 // Component renders animated stars + meteors in the background
@@ -34,13 +35,12 @@ export default function StarBackground() {
     for (let i = 0; i < numberOfStars; i++) {
       newStars.push({
         id: i, // unique key
-        size:
-          Math.random() < 0.03 ? Math.random() * 9 + 3 : Math.random() * 3 + 1, // %3
-        x: Math.random() * 100, // left position (%)
-        y: Math.random() * 100, // top position (%)
+        size: Math.random() < 0.03 ? randomMinMax(3, 11) : randomMinMax(1, 3), // %3
+        x: randomMinMax(1, 99), // left position (%)
+        y: randomMinMax(1, 99), // top position (%)
         opacity: Math.random() * 0.5 + 0.5, // visible 50-100%
-        animationDelay: Math.random() * 10,
-        animationDuration: Math.random() * 4 + 2, // twinkle speed
+        animationDelay: randomMinMax(1, 10),
+        animationDuration: randomMinMax(2, 5), // twinkle speed
       });
     }
 
@@ -55,11 +55,11 @@ export default function StarBackground() {
     for (let i = 0; i < numberOfMeteors; i++) {
       newMeteors.push({
         id: i, // unique key
-        size: Math.random() * 2 + 1, // scale factor
-        x: Math.random() * 100, // left position (%)
-        y: Math.random() * 20, // top possition(upper part of screen)
-        animationDelay: Math.random() * 15, // when meteor starts
-        animationDuration: Math.random() * 3 + 3, // fall speed
+        size: randomMinMax(1, 2), // scale factor
+        x: randomMinMax(30, 99), // left position (%)
+        y: randomMinMax(1, 19), // top possition(upper part of screen)
+        animationDelay: randomMinMax(0, 14), // when meteor starts
+        animationDuration: randomMinMax(3, 6), // fall speed
       });
     }
 

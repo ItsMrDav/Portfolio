@@ -35,7 +35,7 @@ export default function NavBar() {
       <div className="container flex items-center justify-between">
         {/* Logo section: links back to hero section */}
         <a
-          className="text-2xl font-bold text-primary flex items-center"
+          className="text-2xl font-black text-primary flex items-center font-mono"
           href="#hero"
         >
           <span className="relative z-10">
@@ -49,7 +49,7 @@ export default function NavBar() {
             <a
               key={key}
               href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              className="text-foreground/80 font-semibold hover:text-primary transition-colors duration-300"
             >
               {item.name}
             </a>
