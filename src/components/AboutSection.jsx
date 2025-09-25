@@ -14,15 +14,14 @@ export default function AboutSection() {
               Passionate Web Developer & Tech Creator
             </h3>
             <p className="text-foreground">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+              As a junior full-stack developer, I enjoy building responsive and
+              user-friendly web applications while continuously improving my
+              skills in modern technologies.
             </p>
             <p className="text-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the foregront of the ever-evolving web
-              landscape.
+              I'm eager to tackle challenges, learn from real-world projects,
+              and grow into a well-rounded developer. My focus is on writing
+              clean, maintainable code and contributing to meaningful solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
