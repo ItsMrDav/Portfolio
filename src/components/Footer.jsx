@@ -34,7 +34,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-md text-foreground/70">
-          © {new Date().getFullYear()} Davut Simsek. All rights reserved.
+          &copy; {new Date().getFullYear()} Davut Simsek. All rights reserved.
         </p>
       </div>
     </footer>
