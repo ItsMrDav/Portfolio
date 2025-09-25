@@ -94,16 +94,6 @@ export default function ProjectsSection() {
             </div>
           ))}
         </div>
-
-        <div className="text-center mt-12">
-          <a
-            href="https://github.com/ItsMrDav"
-            target="_blank"
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
-          >
-            Check My Github <ArrowRight size={20} />
-          </a>
-        </div>
       </div>
     </section>
   );
